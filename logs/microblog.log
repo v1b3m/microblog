@@ -54,3 +54,5 @@ TypeError: __init__() got an unexpected keyword argument 'arg'
 2018-10-03 18:41:14,396 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
 2018-10-03 22:02:10,812 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
 2018-10-03 22:04:40,034 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
+2018-10-04 11:06:28,309 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
+2018-10-04 11:12:49,753 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:49]
