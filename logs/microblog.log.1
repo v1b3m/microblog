@@ -1,4 +1,5 @@
-2018-10-03 17:12:52,120 ERROR: Exception on /login [GET] [in /home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2018-10-03 18:31:09,749 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
+2018-10-03 18:31:48,586 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6MTAsImV4cCI6MTUzODU4MTI3NC42OTUzNzN9.lUW0wRmDeLXUxtGArJRqcQd9beHs_ciHB33lZQMqaP4 [GET] [in /home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,119 +13,94 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/v1b3m/flask/microblog/app/routes.py", line 54, in login
+  File "/home/v1b3m/flask/microblog/app/routes.py", line 170, in reset_password
+    form = ResetPasswordForm()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/wtforms/form.py", line 212, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask_wtf/form.py", line 88, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/wtforms/form.py", line 272, in __init__
+    super(Form, self).__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/wtforms/form.py", line 52, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/wtforms/meta.py", line 27, in bind_field
+    return unbound_field.bind(form=form, **options)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/wtforms/fields/core.py", line 353, in bind
+    return self.field_class(*self.args, **kw)
+TypeError: __init__() got an unexpected keyword argument 'vaidators'
+2018-10-03 18:33:08,355 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
+2018-10-03 18:40:20,453 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
+2018-10-03 18:40:42,777 ERROR: Exception on /reset_password_request [POST] [in /home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/v1b3m/flask/microblog/app/routes.py", line 157, in reset_password_request
+    send_password_reset_email(user)
+  File "/home/v1b3m/flask/microblog/app/email.py", line 24, in send_password_reset_email
+    user=user, token=token))
+  File "/home/v1b3m/flask/microblog/app/email.py", line 14, in send_email
+    Thread(target=send_async_email, arg=(app,msg)).start()
+TypeError: __init__() got an unexpected keyword argument 'arg'
+2018-10-03 18:41:14,396 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
+2018-10-03 22:02:10,812 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
+2018-10-03 22:04:40,034 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
+2018-10-04 00:28:45,796 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:49]
+2018-10-04 00:28:51,567 ERROR: Exception on /login [GET] [in /home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/v1b3m/flask/microblog/app/routes.py", line 55, in login
     return render_template('login.html', title='Sign In', form=form)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
-    context, ctx.app)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
-    rv = template.render(context)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
   File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
   File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "/home/v1b3m/flask/microblog/app/templates/login.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/home/v1b3m/flask/microblog/app/templates/base.html", line 35, in top-level template code
-    {% block content %}{% endblock %}
-  File "/home/v1b3m/flask/microblog/app/templates/login.html", line 23, in block "content"
-    <a href="{{ url_for('reset_password_request') }}">Click to Reset It</a>
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
-    force_external=external)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'reset_password_request'. Did you mean 'edit_profile' instead?
-2018-10-03 18:18:59,388 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
-2018-10-03 18:22:02,679 ERROR: Exception on /reset_password_request [GET] [in /home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1816, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1831, in finalize_request
-    response = self.make_response(rv)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1957, in make_response
-    'The view function did not return a valid response. The'
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-2018-10-03 18:25:05,203 ERROR: Exception on /reset_password_request [GET] [in /home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1816, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1831, in finalize_request
-    response = self.make_response(rv)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1957, in make_response
-    'The view function did not return a valid response. The'
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-2018-10-03 18:25:30,836 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
-2018-10-03 18:25:52,692 ERROR: Exception on /reset_password_request [POST] [in /home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/v1b3m/flask/microblog/app/routes.py", line 157, in reset_password_request
-    send_password_reset_email(user)
-  File "/home/v1b3m/flask/microblog/app/email.py", line 11, in send_password_reset_email
-    token = user.get_reset_password_token()
-  File "/home/v1b3m/flask/microblog/app/models.py", line 68, in get_reset_password_token
-    app.config['SECRET_KEY'],algorith='HS256').decode('utf-8')
-TypeError: encode() got an unexpected keyword argument 'algorith'
-2018-10-03 18:26:57,629 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
-2018-10-03 18:27:02,194 ERROR: Exception on /reset_password_request [POST] [in /home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/v1b3m/flask/microblog/app/routes.py", line 157, in reset_password_request
-    send_password_reset_email(user)
-  File "/home/v1b3m/flask/microblog/app/email.py", line 13, in send_password_reset_email
-    sender=app.config['ADMINS'][0],
-NameError: name 'app' is not defined
-2018-10-03 18:29:48,014 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
-2018-10-03 18:29:53,137 ERROR: Exception on /reset_password_request [POST] [in /home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/v1b3m/flask/microblog/app/routes.py", line 157, in reset_password_request
-    send_password_reset_email(user)
-  File "/home/v1b3m/flask/microblog/app/email.py", line 13, in send_password_reset_email
-    sender=app.config['ADMINS'][0],
-NameError: name 'app' is not defined
+  File "/home/v1b3m/flask/microblog/app/templates/login.html", line 2, in template
+    {% import bootstrap/wtf.html' as wtf %}
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 300, in parse_import
+    self.stream.expect('name:as')
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/lexer.py", line 384, in expect
+    self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: expected token 'as', got 'string'
+2018-10-04 00:33:12,611 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:49]
+2018-10-04 07:02:39,903 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:51]

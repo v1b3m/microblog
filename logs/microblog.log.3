@@ -1,13 +1,4 @@
-2018-09-30 16:02:56,340 ERROR: Exception on /index [POST] [in /home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
-    context)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
-
-The above exception was the direct cause of the following exception:
-
+2018-09-30 22:23:24,235 ERROR: Exception on /index [GET] [in /home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -23,56 +14,83 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/home/v1b3m/flask/microblog/app/routes.py", line 23, in index
-    db.session.commit()
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
-    return getattr(self.registry(), name)(*args, **kwargs)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 943, in commit
-    self.transaction.commit()
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 467, in commit
-    self._prepare_impl()
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
-    self.session.flush()
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2254, in flush
-    self._flush(objects)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2380, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 249, in reraise
-    raise value
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2344, in _flush
-    flush_context.execute()
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 391, in execute
-    rec.execute(self)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 556, in execute
-    uow
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
-    mapper, table, insert)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 866, in _emit_insert_statements
-    execute(statement, params)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 948, in execute
-    return meth(self, multiparams, params)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
-    compiled_sql, distilled_params
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
-    context)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
-    exc_info
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 265, in raise_from_cause
-    reraise(type(exception), exception, tb=exc_tb, cause=cause)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 248, in reraise
+  File "/home/v1b3m/flask/microblog/app/routes.py", line 35, in index
+    prev_url=prev_url)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
-    context)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.InterfaceError: <unprintable InterfaceError object>
-2018-09-30 16:08:29,228 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:45]
-2018-09-30 16:11:20,271 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:45]
-2018-09-30 21:53:54,022 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:45]
-2018-09-30 22:05:41,191 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:45]
-2018-09-30 22:08:34,553 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:45]
-2018-09-30 22:23:19,791 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:45]
+  File "/home/v1b3m/flask/microblog/app/templates/index.html", line 24, in template
+    {% if next_url}
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 268, in parse_block
+    node.body = self.parse_statements(('name:endblock',), drop_needle=True)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 211, in parse_if
+    node.test = self.parse_tuple(with_condexpr=False)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 620, in parse_tuple
+    args.append(parse())
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 612, in <lambda>
+    parse = lambda: self.parse_expression(with_condexpr=False)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 433, in parse_expression
+    return self.parse_or()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 450, in parse_or
+    left = self.parse_and()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 459, in parse_and
+    left = self.parse_not()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 470, in parse_not
+    return self.parse_compare()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 474, in parse_compare
+    expr = self.parse_math1()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 496, in parse_math1
+    left = self.parse_concat()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 507, in parse_concat
+    args = [self.parse_math2()]
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 517, in parse_math2
+    left = self.parse_pow()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 528, in parse_pow
+    left = self.parse_unary()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 546, in parse_unary
+    node = self.parse_primary()
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 562, in parse_primary
+    next(self.stream)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/lexer.py", line 359, in __next__
+    self.current = next(self._iter)
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/lexer.py", line 562, in wrap
+    for lineno, token, value in stream:
+  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/lexer.py", line 683, in tokeniter
+    filename)
+jinja2.exceptions.TemplateSyntaxError: unexpected '}'
+2018-09-30 22:26:50,539 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:45]
+2018-09-30 22:37:34,469 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:45]
+2018-10-03 16:39:00,695 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
+2018-10-03 16:49:00,939 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
+2018-10-03 17:01:18,793 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
+2018-10-03 17:02:58,717 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
+2018-10-03 17:04:10,115 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
+2018-10-03 17:11:14,830 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
+2018-10-03 17:12:50,351 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:47]
