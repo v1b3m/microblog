@@ -1,4 +1,4 @@
-2018-10-20 07:27:28,500 ERROR: Exception on /favicon.ico [GET] [in /home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2018-10-20 07:40:22,078 ERROR: Exception on /favicon.ico [GET] [in /home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
     rv = self.dispatch_request()
@@ -40,65 +40,42 @@ Traceback (most recent call last):
   File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: 404.html
-2018-10-20 07:29:44,820 ERROR: Exception on /favicon.ico [GET] [in /home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
-    self.raise_routing_exception(req)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1774, in raise_routing_exception
-    raise request.routing_exception
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/ctx.py", line 336, in match_request
-    self.url_adapter.match(return_rule=True)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 1581, in match
-    raise NotFound()
-werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1713, in handle_user_exception
-    return self.handle_http_exception(e)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1644, in handle_http_exception
-    return handler(e)
-  File "/home/v1b3m/flask/microblog/app/errors/handlers.py", line 8, in not_found_error
-    return render_template('404.html'), 404
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
-    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
-    source, filename, uptodate = self.get_source(environment, name)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
-    return self._get_source_fast(environment, template)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: 404.html
-2018-10-20 07:29:51,555 ERROR: Exception on /translate [POST] [in /home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/v1b3m/flask/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 228, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/v1b3m/flask/microblog/app/main/routes.py", line 130, in translate_text
-    return jsonify({'text': translate(request.form['text'],
-NameError: name 'translate' is not defined
-2018-10-20 07:40:02,288 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 07:45:36,647 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 07:47:31,360 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 07:51:43,210 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 07:53:34,721 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 07:56:10,488 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 07:58:47,011 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 08:14:33,720 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 08:14:49,275 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 08:15:52,222 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 08:17:42,225 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 08:17:50,423 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 08:22:13,708 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 08:48:54,753 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 08:49:19,698 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 08:50:35,987 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 08:51:50,688 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 08:54:15,686 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 08:56:16,055 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 09:00:51,073 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 09:14:05,233 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 09:14:20,998 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 09:14:26,429 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-20 12:06:28,567 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:71]
+2018-10-22 06:09:44,720 INFO: Microblog startup [in /home/v1b3m/microblog/app/__init__.py:71]
+2018-10-22 06:10:12,744 INFO: Microblog startup [in /home/v1b3m/microblog/app/__init__.py:71]
+2018-10-22 06:15:14,109 INFO: Microblog startup [in /home/v1b3m/microblog/app/__init__.py:71]
+2018-10-22 06:17:32,169 INFO: Microblog startup [in /home/v1b3m/microblog/app/__init__.py:71]
+2018-10-22 06:17:32,242 INFO: Microblog startup [in /home/v1b3m/microblog/app/__init__.py:71]
+2018-10-22 06:17:32,307 INFO: Microblog startup [in /home/v1b3m/microblog/app/__init__.py:71]
+2018-10-22 06:17:32,348 INFO: Microblog startup [in /home/v1b3m/microblog/app/__init__.py:71]
+2018-10-22 08:11:42,255 INFO: Microblog startup [in /home/v1b3m/microblog/app/__init__.py:71]
+2018-10-22 08:11:42,260 INFO: Microblog startup [in /home/v1b3m/microblog/app/__init__.py:71]
+2018-10-22 08:11:42,260 INFO: Microblog startup [in /home/v1b3m/microblog/app/__init__.py:71]
+2018-10-22 08:11:42,261 INFO: Microblog startup [in /home/v1b3m/microblog/app/__init__.py:71]
+2018-10-30 11:35:33,050 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:76]
+2018-10-31 21:53:44,842 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:76]
+2018-10-31 21:53:58,255 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:76]
+2018-11-05 15:17:01,268 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:76]
+2018-11-05 15:40:35,209 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:76]
