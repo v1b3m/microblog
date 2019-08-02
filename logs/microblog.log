@@ -108,3 +108,4 @@ Traceback (most recent call last):
     g.search_form = SearchForm()
 NameError: name 'SearchForm' is not defined
 2018-11-05 22:27:35,999 INFO: Microblog startup [in /home/v1b3m/flask/microblog/app/__init__.py:76]
+2019-08-02 13:24:56,656 INFO: Microblog startup [in /home/v1b3m/Engineer/flask/microblog/app/__init__.py:76]
