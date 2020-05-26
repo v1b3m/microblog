@@ -1,6 +1,6 @@
 # Microblog Applicatiion
 
-This project is a simple microblog application designed using the Flask/Python stack. The app is deployed on heroku and a live version of the application can be accessed at https://v1b3microblog.tk. Please register and login with your username to try the application.
+This project is a simple microblog application designed using the Flask/Python stack. The app is deployed on heroku and a live version of the application can be accessed at https://bit.ly/2B2xABM. Please register and login with your username to try the application.
 
 # Installation
 
